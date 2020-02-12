@@ -56,7 +56,7 @@ body{
   }
 }
 .scoreBox{
-  perspective: 1000px;
+  perspective: 2000px;
   border-top: 20vh solid #263238 ;
   display: flex;
   flex-direction: row;
@@ -111,7 +111,7 @@ body{
 }
 .demo{
     animation-name: spinner;
-    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
     animation-duration: 3s;
 }
 
