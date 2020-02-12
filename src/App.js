@@ -32,7 +32,7 @@ class App extends React.Component {
               Layatharang
             </div>
             <div className="scoreBox">
-              <div className="scoreHouse" id ="demo" style={{backgroundColor: "#6a1b9a"}}>
+              <div className="scoreHouse demo" style={{backgroundColor: "#6a1b9a"}}>
                 <div className="logoOut">
                   <img src={Samhara} className="logo" alt=""/>
                 </div>
@@ -40,7 +40,7 @@ class App extends React.Component {
                   31
                 </div>
               </div>
-              <div className="scoreHouse" style={{backgroundColor: "#1976d2"}}>
+              <div className="scoreHouse demo" style={{backgroundColor: "#1976d2"}}>
                 <div className="logoOut">
                   <img src={Rakshasa} className="logo" alt=""/>
                 </div>
@@ -48,7 +48,7 @@ class App extends React.Component {
                   31
                 </div>
               </div>
-              <div className="scoreHouse" style={{backgroundColor: "#f57c00"}}>
+              <div className="scoreHouse demo" style={{backgroundColor: "#f57c00"}}>
                 <div className="logoOut">
                   <img src={Druva} className="logo" alt=""/>
                 </div>
@@ -56,7 +56,7 @@ class App extends React.Component {
                   31
                 </div>
               </div>
-              <div className="scoreHouse" style={{backgroundColor: "#d32f2f"}}>
+              <div className="scoreHouse demo" style={{backgroundColor: "#d32f2f"}}>
                 <div className="logoOut">
                   <img src={Thandava} className="logo" alt=""/>
                 </div>
