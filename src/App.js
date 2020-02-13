@@ -33,6 +33,48 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    let score = {};
+    axios.get("http://13.233.96.106/scores")
+        .then(function (response) {
+          score = response.data;
+          console.log(response.data);
+        })
+        .catch(function (error) {
+          alert(error);
+        });
+    setTimeout(() => {
+      const {thandava, dhruva, rakshasa, samhara ,topper} = score.chakravyuh;
+      this.setState({
+        type : "Chakravyuh",
+        samhara : samhara,
+        rakshasa : rakshasa,
+        dhruva : dhruva,
+        thandava : thandava,
+      }, () => this.changeBorderClass() );
+      setTimeout(()=> this.setState({ topper : topper}) ,1500) ;
+      setTimeout(() => {
+        const {thandava, dhruva, rakshasa, samhara ,topper} = score.layatharang;
+        this.setState({
+          type:"Layatharang",
+          samhara : samhara,
+          rakshasa : rakshasa,
+          dhruva : dhruva,
+          thandava : thandava,
+        } , () => this.changeBorderClass() );
+        setTimeout(()=> this.setState({ topper : topper}) ,1500) ;
+        setTimeout(() => {
+          const {thandava, dhruva, rakshasa, samhara ,topper} = score.overall_score;
+          this.setState({
+            type:"Overall",
+            samhara : samhara,
+            rakshasa : rakshasa,
+            dhruva : dhruva,
+            thandava : thandava,
+          } , () => this.changeBorderClass() );
+          setTimeout(()=> this.setState({ topper : topper}) ,1500) ;
+        }, 30000);
+      }, 30000);
+    }, 5000);
     setInterval(()=>{
       let score = {};
       axios.get("http://13.233.96.106/scores")
@@ -56,7 +98,7 @@ class App extends React.Component {
         setTimeout(() => {
           const {thandava, dhruva, rakshasa, samhara ,topper} = score.layatharang;
           this.setState({
-            type:"Laytharang",
+            type:"Layatharang",
             samhara : samhara,
             rakshasa : rakshasa,
             dhruva : dhruva,
@@ -73,10 +115,10 @@ class App extends React.Component {
               thandava : thandava,
             } , () => this.changeBorderClass() );
             setTimeout(()=> this.setState({ topper : topper}) ,1500) ;
-          }, 12000);
-        }, 12000);
-      }, 12000);
-    }, 36000);
+          }, 30000);
+        }, 30000);
+      }, 30000);
+    }, 90000);
     setTimeout(() => this.setState({styl:true}),3000)
   }
 
@@ -88,7 +130,7 @@ class App extends React.Component {
           <div className="App" style={ this.state.styl ? {opacity:"1"}:null}>
           <div className="mainBox">
             <div className="title">
-              {this.state.type}
+              {this.state.type} {this.state.type !== "Overall"  ? <span style={{fontWeight:"500"}}>2020</span> : null}
             </div>
             <div className={ this.state.border ? "scoreBox" : "scoreBoxChange"}
                  style={this.state.topper === "rakshasa" ?  {borderColor:"#1976d2"} :
