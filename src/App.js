@@ -117,8 +117,8 @@ class App extends React.Component {
             } , () => this.changeBorderClass() );
             setTimeout(()=> this.setState({ topper : topper}) ,1500) ;
           }, 30000);
-        }, 30000);
-      }, 15000);
+        }, 15000);
+      }, 30000);
     }, 75000);
     setTimeout(() => this.setState({styl:true}),3000)
   }
