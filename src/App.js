@@ -16,6 +16,7 @@ class App extends React.Component {
     this.state={
       border:true,
       styl:false,
+      sColor:"",
       samhara : 0,
       rakshasa : 0,
       dhruva : 0,
@@ -73,7 +74,7 @@ class App extends React.Component {
           } , () => this.changeBorderClass() );
           setTimeout(()=> this.setState({ topper : topper}) ,1500) ;
         }, 30000);
-      }, 30000);
+      }, 15000);
     }, 5000);
     setInterval(()=>{
       let score = {};
@@ -117,8 +118,8 @@ class App extends React.Component {
             setTimeout(()=> this.setState({ topper : topper}) ,1500) ;
           }, 30000);
         }, 30000);
-      }, 30000);
-    }, 90000);
+      }, 15000);
+    }, 75000);
     setTimeout(() => this.setState({styl:true}),3000)
   }
 
