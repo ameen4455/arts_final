@@ -13,11 +13,10 @@ body{
 
 .mainBox{
   margin: auto;
-  transition: 10s;
   border-top: 4vw solid rgb(0,0,0,0.1);
   border-right: 10vw solid rgb(0,0,0,0.1);
   border-left: 10vw solid rgb(0,0,0,0.1);
-  border-bottom: 4vw solid rgb(0,0,0,0.1);
+  border-bottom: 60vh solid rgb(0,0,0,0.1);
   height: 100%;
 }
 
@@ -91,7 +90,7 @@ body{
   font-family: Lato;
   font-size: 2.43vw;
   font-weight: 600;
-  margin-top: 1%;
+  margin-top: 2.2%;
   margin-left: 3%;
   color: white;
   text-align: center;
