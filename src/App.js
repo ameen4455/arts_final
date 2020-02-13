@@ -19,8 +19,7 @@ class App extends React.Component {
       samhara : 0,
       rakshasa : 0,
       dhruva : 0,
-      thandava : 0,
-      time : 10000
+      thandava : 0
     }
   }
 
@@ -52,7 +51,6 @@ class App extends React.Component {
           rakshasa : rakshasa,
           dhruva : dhruva,
           thandava : thandava,
-          time: 90000
         }, () => this.changeBorderClass() );
         setTimeout(()=> this.setState({ topper : topper}) ,1500) ;
         setTimeout(() => {
@@ -75,10 +73,10 @@ class App extends React.Component {
               thandava : thandava,
             } , () => this.changeBorderClass() );
             setTimeout(()=> this.setState({ topper : topper}) ,1500) ;
-          }, 30000);
-        }, 30000);
-      }, 30000);
-    }, this.state.time);
+          }, 12000);
+        }, 12000);
+      }, 12000);
+    }, 36000);
     setTimeout(() => this.setState({styl:true}),3000)
   }
 
