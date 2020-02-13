@@ -14,10 +14,10 @@ body{
 .mainBox{
   margin: auto;
   transition: 10s;
-  border-top: 4vw solid rgb(0,0,0,0.4);
-  border-right: 10vw solid rgb(0,0,0,0.4);
-  border-left: 10vw solid rgb(0,0,0,0.4);
-  border-bottom: 4vw solid rgb(0,0,0,0.4);
+  border-top: 4vw solid rgb(0,0,0,0.1);
+  border-right: 10vw solid rgb(0,0,0,0.1);
+  border-left: 10vw solid rgb(0,0,0,0.1);
+  border-bottom: 4vw solid rgb(0,0,0,0.1);
   height: 100%;
 }
 
@@ -58,7 +58,19 @@ body{
 .scoreBox{
   perspective: 2000px;
   border-top: 20vh solid #263238 ;
+  margin-top: 0vh;
   display: flex;
+  transition: 1s;
+  flex-direction: row;
+  width: fit-content;
+}
+
+.scoreBoxChange{
+  perspective: 2000px;
+  border-top: 0vh solid #263238 ;
+  margin-top: 20vh;
+  display: flex;
+  transition: 1s;
   flex-direction: row;
   width: fit-content;
 }
@@ -75,6 +87,7 @@ body{
 }
 
 .title{
+  z-index: 4;
   font-family: Lato;
   font-size: 2.23vw;
   font-weight: 600;
